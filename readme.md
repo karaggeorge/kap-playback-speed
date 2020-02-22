@@ -1,6 +1,6 @@
 # kap-playback-speed [![Build Status](https://travis-ci.org/karaggeorge/kap-playback-speed.svg?branch=master)](https://travis-ci.org/karaggeorge/kap-playback-speed)
 
-> [Kap](https://github.com/wulkano/kap) plugin - Add a progress bar to your recordings
+> [Kap](https://github.com/wulkano/kap) plugin - Speed up or slow down Kap recordings
 
 
 ## Install
