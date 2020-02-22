@@ -1,0 +1,35 @@
+{
+	"name": "kap-playback-speed",
+	"version": "1.0.0",
+	"description": "Speed up or slow down Kap recordings",
+	"license": "MIT",
+	"repository": "karaggeorge/kap-playback-speed",
+	"author": {
+		"name": "George Karagkiaouris",
+		"email": "gkaragkiaouris2@gmail.com",
+		"url": "https://gkaragkiaouris.tech"
+	},
+	"scripts": {
+		"test": "xo"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"kap-plugin",
+		"slowmo",
+		"slow",
+		"mo",
+		"speed",
+		"up",
+		"slow",
+		"down"
+	],
+	"kapVersion": ">=3.2.0",
+	"devDependencies": {
+		"xo": "^0.24.0"
+	},
+	"dependencies": {
+		"p-cancelable": "^2.0.0"
+	}
+}
