@@ -32,11 +32,11 @@ const slowDown = PCancelable.fn(async ({config, convert, exportOptions, inputPat
 });
 
 const slowDownService = {
-	title: 'Slow down',
+	title: 'Slow Down',
 	config: {
 		slowDownPercent: {
-			title: 'Slow down percent',
-			description: 'Percent by which to slow down the video by. For example, 0.5 means half speed, and double the duration.',
+			title: 'Slow Down Percentage',
+			description: 'Slow down the video by the given percentage. For example, 0.5 means half speed and double the duration.',
 			type: 'number',
 			minimum: 0,
 			maximum: 1,
@@ -44,8 +44,8 @@ const slowDownService = {
 			required: true
 		},
 		slowDownAudio: {
-			title: 'Slow down audio',
-			description: 'This only works if slow percent is less or equal to 0.5',
+			title: 'Slow Down Audio',
+			description: 'This only works if “Slow Down Percentage” is less than or equal to 0.5',
 			type: 'boolean',
 			default: true
 		}
@@ -84,19 +84,19 @@ const speedUp = PCancelable.fn(async ({config, convert, exportOptions, inputPath
 });
 
 const speedUpService = {
-	title: 'Speed up',
+	title: 'Speed Up',
 	config: {
 		speedUpPercent: {
-			title: 'Speed up mutliplier',
-			description: 'Multiplier by which to speed up the video by. For example, 2 means double the speed, and half the duration.',
+			title: 'Speed Up Mutliplier',
+			description: 'Speed up the video by the given multiplier. For example, 2 means double the speed and half the duration.',
 			type: 'number',
 			minimum: 1,
 			default: 2,
 			required: true
 		},
 		speedUpAudio: {
-			title: 'Speed up audio',
-			description: 'This only works if speed up multiplier is less or equal to 2',
+			title: 'Speed Up Audio',
+			description: 'This only works if “Speed Up Mutliplier” is less than or equal to 2',
 			type: 'boolean',
 			default: true
 		}
