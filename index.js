@@ -45,7 +45,7 @@ const slowDownService = {
 		},
 		slowDownAudio: {
 			title: 'Slow Down Audio',
-			description: 'This only works if “Slow Down Percentage” is less than or equal to 0.5',
+			description: 'This only works if “Slow Down Percentage” is less than or equal to 0.5.',
 			type: 'boolean',
 			default: true
 		}
@@ -56,13 +56,13 @@ const slowDownService = {
 const speedUp = PCancelable.fn(async ({config, convert, exportOptions, inputPath, outputPath}, onCancel) => {
 	const {speedUpPercent, speedUpAudio} = config.store;
 
-	const shouldspeedUpAudio = speedUpAudio && speedUpPercent <= 2 && !exportOptions.isMuted;
+	const shouldSpeedUpAudio = speedUpAudio && speedUpPercent <= 2 && !exportOptions.isMuted;
 
 	const process = convert([
 		'-i',
 		inputPath,
 		...(
-			shouldspeedUpAudio ? [
+			shouldSpeedUpAudio ? [
 				'-filter_complex',
 				`[0:v]setpts=${1 / speedUpPercent}*PTS[v];[0:a]atempo=${speedUpPercent}[a]`,
 				'-map',
@@ -87,7 +87,7 @@ const speedUpService = {
 	title: 'Speed Up',
 	config: {
 		speedUpPercent: {
-			title: 'Speed Up Mutliplier',
+			title: 'Speed Up Multiplier',
 			description: 'Speed up the video by the given multiplier. For example, 2 means double the speed and half the duration.',
 			type: 'number',
 			minimum: 1,
@@ -96,7 +96,7 @@ const speedUpService = {
 		},
 		speedUpAudio: {
 			title: 'Speed Up Audio',
-			description: 'This only works if “Speed Up Mutliplier” is less than or equal to 2',
+			description: 'This only works if “Speed Up Multiplier” is less than or equal to 2.',
 			type: 'boolean',
 			default: true
 		}
