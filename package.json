@@ -1,7 +1,7 @@
 {
 	"name": "kap-playback-speed",
 	"version": "1.0.2",
-	"description": "Speed up or slow down Kap recordings",
+	"description": "Speed up or slow down recordings",
 	"license": "MIT",
 	"repository": "karaggeorge/kap-playback-speed",
 	"author": {
